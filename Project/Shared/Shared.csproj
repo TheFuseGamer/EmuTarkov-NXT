@@ -49,7 +49,7 @@
     <Compile Include="Code\Models\EFT\Packet.cs" />
     <Compile Include="Code\Models\Server\Account.cs" />
     <Compile Include="Code\Libs\FileExt.cs" />
-    <Compile Include="Code\Libs\Json.cs" />
+    <Compile Include="Utility\Json.cs" />
     <Compile Include="Code\Controllers\Log.cs" />
     <Compile Include="Code\Libs\Zlib.cs" />
     <Compile Include="Diagnostics\ILogger.cs" />

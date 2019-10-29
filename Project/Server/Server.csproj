@@ -42,6 +42,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\ServerConfiguration.cs" />
     <Compile Include="Controllers\AccountHandler.cs" />
     <Compile Include="Controllers\RequestHandler.cs" />
     <Compile Include="Controllers\ResponseHandler.cs" />

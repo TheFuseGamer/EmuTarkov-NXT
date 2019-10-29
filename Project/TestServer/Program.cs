@@ -1,5 +1,6 @@
 ﻿using TestServer.Diagnostics;
 using EmuTarkov.Server;
+using TestServer.Config;
 
 namespace TestServer
 {
@@ -7,8 +8,9 @@ namespace TestServer
 	{
 		public static void Main(string[] args)
 		{
+            ServerConfig config = new ServerConfig();
 			Logger logger = new Logger();
-            Server server = new Server("http://127.0.0.1:1337/", logger);
+            Server server = new Server(config.BackendUrl, logger);
             server.Start();
         }
 	}

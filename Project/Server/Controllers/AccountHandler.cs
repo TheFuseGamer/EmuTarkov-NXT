@@ -6,6 +6,7 @@
 
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using EmuTarkov.Shared.Utility;
 using EmuTarkovNXT.Shared;
 using EmuTarkovNXT.Shared.Models.EFT;
 using EmuTarkovNXT.Shared.Models.Server;
@@ -24,7 +25,7 @@ namespace EmuTarkov.Server.Controllers
 		public AccountHandler(RequestHandler requestInfo)
 		{
 			request = requestInfo;
-			filepath = FileExt.CombinePath(Constants.filepath, "./Appdata/accounts.json");
+			//filepath = FileExt.CombinePath(Constants.filepath, "./Appdata/accounts.json");
 			accounts = new List<Account>();
 			threadLock = new object();
 			LoadAccounts();
