@@ -4,12 +4,12 @@
  */
 
 using System;
-using System.Net;
 using System.IO;
+using System.Net;
 using System.Text;
 using EmuTarkovNXT.Shared;
 
-namespace EmuTarkovNXT.Server
+namespace EmuTarkov.Server.Controllers
 {
 	public class RequestHandler
 	{

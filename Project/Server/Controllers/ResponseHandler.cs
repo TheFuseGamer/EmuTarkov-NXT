@@ -5,11 +5,11 @@
 
 using System;
 using System.IO;
-using System.Text;
 using System.Net;
+using System.Text;
 using EmuTarkovNXT.Shared;
 
-namespace EmuTarkovNXT.Server
+namespace EmuTarkov.Server.Controllers
 {
 	public class ResponseHandler
 	{
@@ -20,10 +20,10 @@ namespace EmuTarkovNXT.Server
 				return;
 			}
 
-			string data = ResponseFactory.GetResponse(requestHandler.url, requestHandler.body);
+			//string data = ResponseFactory.GetResponse(requestHandler.url, requestHandler.body);
 			byte[] buffer = null;
 
-			switch (data)
+			/*switch (data)
 			{
 				case "IMAGE":
 					buffer = SendImage(response, requestHandler.url);
@@ -32,7 +32,7 @@ namespace EmuTarkovNXT.Server
 				default:
 					buffer = SendJson(response, data);
 					break;
-			}
+			}*/
 
 			response.AddHeader("Set-Cookie", "PHPSESSID=" + requestHandler.sid);
 			response.ContentLength64 = buffer.Length;

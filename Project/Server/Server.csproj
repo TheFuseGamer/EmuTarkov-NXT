@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3B1D686C-4F8B-44D6-88C5-D277084A32FE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Server</RootNamespace>
-    <AssemblyName>Server</AssemblyName>
+    <RootNamespace>EmuTarkov.Server</RootNamespace>
+    <AssemblyName>EmuTarkov.Server</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,16 +35,21 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zlib, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zlib.1.9.1.5\lib\Ionic.Zlib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Controllers\AccountHandler.cs" />
-    <Compile Include="Code\Controllers\RequestHandler.cs" />
-    <Compile Include="Code\Controllers\ResponseFactory.cs" />
-    <Compile Include="Code\Controllers\ResponseHandler.cs" />
-    <Compile Include="Code\Server.cs" />
-    <Compile Include="Code\Constants.cs" />
+    <Compile Include="Controllers\AccountHandler.cs" />
+    <Compile Include="Controllers\RequestHandler.cs" />
+    <Compile Include="Controllers\ResponseHandler.cs" />
+    <Compile Include="Http\HttpRequestHandler.cs" />
+    <Compile Include="Http\HttpServer.cs" />
+    <Compile Include="Models\ClientRequest.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj">
@@ -52,13 +57,12 @@
       <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Database\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Appdata\accounts.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

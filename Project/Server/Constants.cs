@@ -1,4 +1,4 @@
-﻿namespace EmuTarkovNXT.Server
+﻿namespace EmuTarkov.Server
 {
 	public static class Constants
 	{

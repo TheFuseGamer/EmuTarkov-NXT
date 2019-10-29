@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{490832CE-4149-4AE3-9C5A-BF8EDC6309E3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Shared</RootNamespace>
-    <AssemblyName>Shared</AssemblyName>
+    <RootNamespace>EmuTarkov.Shared</RootNamespace>
+    <AssemblyName>EmuTarkov.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -52,6 +52,9 @@
     <Compile Include="Code\Libs\Json.cs" />
     <Compile Include="Code\Controllers\Log.cs" />
     <Compile Include="Code\Libs\Zlib.cs" />
+    <Compile Include="Diagnostics\ILogger.cs" />
+    <Compile Include="Models\EftClient.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

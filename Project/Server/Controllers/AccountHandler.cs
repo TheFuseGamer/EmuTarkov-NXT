@@ -4,15 +4,13 @@
  * remarks: not thread-safe
  */
 
-using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Text.RegularExpressions;
 using EmuTarkovNXT.Shared;
 using EmuTarkovNXT.Shared.Models.EFT;
 using EmuTarkovNXT.Shared.Models.Server;
 
-namespace EmuTarkovNXT.Server
+namespace EmuTarkov.Server.Controllers
 {
 	public class AccountHandler
 	{
